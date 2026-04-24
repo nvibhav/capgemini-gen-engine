@@ -1,0 +1,14 @@
+spring:
+  application:
+    name: capgemini-gen-engine
+
+gen-engine:
+  api-key: ${API_KEY}
+  openai-base-url: https://openai.generative.engine.capgemini.com/v1
+  websocket-url: wss://ws.generative.engine.capgemini.com
+
+logging:
+  level:
+    com.capgemini.genengine: DEBUG
+    org.springframework.web.reactive: DEBUG
+    reactor.netty.http.client.HttpClient: DEBUG
