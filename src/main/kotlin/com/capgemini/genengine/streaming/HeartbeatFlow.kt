@@ -4,19 +4,9 @@ import kotlinx.coroutines.channels.awaitClose
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.channelFlow
-import kotlinx.coroutines.flow.flow
 import kotlinx.coroutines.launch
 import java.time.Duration
 import kotlin.time.Duration.Companion.milliseconds
-
-fun heartbeatFlow(
-    interval: Duration = Duration.ofSeconds(10L)
-): Flow<StreamingEvent> = flow {
-    while (true) {
-        delay(interval.toMillis().milliseconds)
-        emit(StreamingEvent.Heartbeat)
-    }
-}
 
 fun withHeartbeat(
     stream: Flow<StreamingEvent>,
