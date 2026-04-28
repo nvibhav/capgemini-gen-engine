@@ -8,7 +8,7 @@ import org.springframework.web.reactive.function.client.awaitBody
 
 @Service
 class GenEngineRestService(
-    private val webClient: WebClient
+    private val webClient: WebClient,
 ) {
     private val log = LoggerFactory.getLogger(GenEngineRestService::class.java)
 
