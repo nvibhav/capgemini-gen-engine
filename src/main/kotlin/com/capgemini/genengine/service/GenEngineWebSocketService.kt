@@ -36,7 +36,7 @@ class GenEngineWebSocketService(
 
     /**
      * Stream responses from the WebSocket API
-     * with retry/backoff resilience and graceful lifecycle semantics.
+     * with graceful lifecycle semantics.
      */
 
     fun streamTokens(request: GenerativeRequest): Flow<StreamingEvent> = flow {
